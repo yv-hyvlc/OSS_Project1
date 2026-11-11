@@ -95,7 +95,10 @@ class Bullet(pygame.sprite.Sprite):
     def update(self):
         # TODO(F2): 매 프레임 BULLET_SPEED 만큼 위로 움직이게 할 것.
         #           총알이 화면 위로 완전히 나가면 self.kill() 로 없앨 것.
-        pass
+        self.rect.y -= BULLET_SPEED
+
+        if self.rect.bottom < 0:
+            self.kill()
 
 
 class Enemy(pygame.sprite.Sprite):
