@@ -70,6 +70,13 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_RIGHT]:
             self.rect.x += PLAYER_SPEED
 
+        if self.rect.left < 0:
+            self.rect.left = 0
+
+        if self.rect.right > WIDTH:
+            self.rect.right = WIDTH
+
+
     def shoot(self):
         """플레이어 위쪽 가운데에서 출발하는 총알 하나를 만들어 돌려준다."""
         # TODO(F2): Bullet(x, y) 를 작성할 것.
