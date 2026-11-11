@@ -145,6 +145,12 @@ class Game:
         self.screen.blit(self.hud_shade, (0, 0))  # 점수·생명 글자 뒤 어두운 띠
         self.draw_text(f"LIVES: {self.lives}", self.font, WHITE, topright=(WIDTH - 10, 10))
         # TODO(F3): 화면 왼쪽 위에 현재 점수를 "SCORE: 120" 형태로 표시할 것.
+        self.draw_text(
+            f"SCORE: {self.score}",
+            self.font,
+            WHITE,
+            topleft=(10, 10)
+        )
         if self.game_over:
             self.draw_game_over()
         pygame.display.flip()
