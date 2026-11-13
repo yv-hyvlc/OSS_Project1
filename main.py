@@ -136,6 +136,9 @@ class Game:
         """게임 오버 처리."""
         self.game_over = True
         # TODO(F5): 이번 점수가 최고 점수보다 높으면 self.high_score 를 바꾸고 save_high_score() 로 저장할 것.
+        if self.score > self.high_score:
+            self.high_score = self.score
+            save_high_score(self.high_score)
 
     # ---------------- 그리기 ----------------
     def draw_text(self, text, font, color, **position):
