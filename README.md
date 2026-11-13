@@ -34,7 +34,7 @@ python main.py
 |`assets/`|그림 — ansimuz CC0 픽셀 아트 (출처: `assets/CREDITS.md`)|
 |`AI\_USAGE.md`|생성형 AI 사용 기록|
 
-## 구현한 기능 \[학생 작성]
+## 구현한 기능
 
 <!-- 구현한 기능을 확인할 것. 예: - \[x] F1 플레이어 이동 — 방향키 좌우 이동, 화면 밖으로 나가지 않음 -->
 
