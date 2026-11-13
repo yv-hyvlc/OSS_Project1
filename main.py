@@ -17,8 +17,11 @@ def load_high_score():
     """HIGHSCORE_FILE 에서 최고 점수를 읽어 돌려준다."""
     # TODO(F5): 파일에서 최고 점수를 읽어 int 로 반환할 것.
     #           파일이 없거나 내용이 숫자가 아니면 0 을 반환할 것.
-    return 0
-
+    try:
+        with open(HIGHSCORE_FILE, "r", encoding="utf-8") as file:
+            return int(file.read().strip())
+    except (FileNotFoundError, ValueError):
+        return 0
 
 def save_high_score(score):
     """최고 점수를 HIGHSCORE_FILE 에 저장한다."""
