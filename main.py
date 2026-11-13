@@ -200,7 +200,19 @@ class Game:
         )
 
         # TODO(F5): 최고 점수("HIGH SCORE: 300")와 재시작 안내("Press R to restart")도 표시할 것.
-      
+        self.draw_text(
+            f"HIGH SCORE: {self.high_score}",
+            self.font,
+            YELLOW,
+            center=(WIDTH // 2, 360)
+        )
+
+        self.draw_text(
+            "Press R to restart",
+            self.font,
+            WHITE,
+            center=(WIDTH // 2, 420)
+        )
 
     # ---------------- 게임 루프 ----------------
     def step(self):
